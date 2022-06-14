@@ -10,7 +10,7 @@ import java.util.Scanner;
  *     Форматирование строки "День.Месяц.Год" вынести в отдельную
  * функцию.
  */
-public class HW_task1 {
+public class PT_task1 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

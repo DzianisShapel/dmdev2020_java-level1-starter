@@ -1,7 +1,7 @@
 package com.dmdev.lesson5;
 
 import java.util.Scanner;
-public class HW_task2 {
+public class PT_task2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input a: ");

@@ -1,5 +1,5 @@
 package com.dmdev.lesson7_arrays;
-
+import java.util.Arrays;
 /**
  * Дан одномерный массив символов.
  * Преобразовать его в одномерный массив чисел,
@@ -11,4 +11,40 @@ package com.dmdev.lesson7_arrays;
  */
 
 public class HW_task2 {
+    public static void main(String[] args) {
+        char[] values = {'a', '6', 'y', 'P', 'T', 'q', '9', '+', '+', 'a', 'b', 'c'};
+        System.out.println(Arrays.toString(convertedArray(values)));
+    }
+
+    public static int[] convertedArray(char[] values){
+        int currentIndex = 0;
+        int[] result = new int[calculateArraySize(values)];
+        for(int i = 0; i < values.length; i++){
+            if((int)values[i] > average(values)) {
+                result[currentIndex] = values[i];
+                currentIndex++;
+            }
+        }
+        return result;
+    }
+
+    public static int average(char[] array){
+        int average;
+        int sum = 0;
+        for(int i = 0; i < array.length; i++){
+            sum += array[i];
+        }
+        average = sum / array.length;
+        return average;
+    }
+
+    private static int calculateArraySize(char[] values) {
+        int size = 0;
+        for (int i = 0; i < values.length; i++) {
+            if((int)values[i] > average(values)){
+                size++;
+            }
+        }
+        return size;
+    }
 }
